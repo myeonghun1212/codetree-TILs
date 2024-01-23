@@ -24,7 +24,7 @@ int main(){
     while(true){
       int size = arr[e] - arr[s - 1];
       
-      if(size > ss){
+      if(size >= ss){
         if(res == -1) res = e - s + 1;
         else res = min(res, e - s + 1);
         s += 1;

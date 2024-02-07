@@ -10,7 +10,7 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
-    vector<int> t1, t2;
+    vector<int> t1, t2,t3,t4;
     unordered_map<int, int> ab, cd;
     int n;
     int res = 0;
@@ -25,28 +25,24 @@ int main() {
         cin >> t;
         t2.push_back(t);
     }
-    for(int i : t1){
-        for(int j : t2){
-            ab[i + j]++;
-        }
-    }
-    t1.clear();
-    t2.clear();
     for(int i = 0;i < n; i++){
         int t;
         cin >> t;
-        t1.push_back(t);
+        t3.push_back(t);
     }
     for(int i = 0;i < n; i++){
         int t;
         cin >> t;
-        t2.push_back(t);
+        t4.push_back(t);
     }
-    for(int i : t1){
-        for(int j : t2){
-            cd[i + j]++;
+    for(int i = 0; i < n; i++){
+        for(int j= 0; j < n; j++){
+            ab[t1[i] + t2[j]]++;
+            cd[t3[i] + t4[j]]++;
         }
     }
+   
+
 
     for(auto & it1: ab){
         for(auto & it2: cd){

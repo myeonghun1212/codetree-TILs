@@ -7,6 +7,9 @@ using namespace std;
 int main() {
     // 여기에 코드를 작성해주세요.
     //freopen("sample_input.txt", "r", stdin);
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
     vector<int> t1, t2;
     unordered_map<int, int> ab, cd;
     int n;

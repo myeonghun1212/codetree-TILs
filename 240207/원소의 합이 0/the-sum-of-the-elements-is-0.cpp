@@ -45,10 +45,8 @@ int main() {
 
 
     for(auto & it1: ab){
-        for(auto & it2: cd){
-            if(it1.first + it2.first == 0){
-                res += it1.second * it2.second;
-            }
+        if(cd.find(-it1.first) != cd.end()){
+            res += it1.second * cd[-it1.first];
         }
     }
 

@@ -6,7 +6,7 @@ using namespace std;
 int main(){
     int x, y;
     int n;
-    unordered_map<int,int> map;
+    unordered_map<long long int,long long int> map;
     cin >> n;
     for(int i = 0;i < n; i++){
         cin >> x >> y;
@@ -17,7 +17,7 @@ int main(){
             map[x] = y;
         }
     }
-    int res = 0;
+    long long int res = 0;
     for(auto it : map){
         res += it.second;
     }

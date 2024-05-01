@@ -18,8 +18,13 @@ for i in range(n):
             cnt += abs(y)
         else:
             cnt += abs(x)
+        x = 0
+        y = 0
         break
     x = x + c * a[b][0]
     y = y + c * a[b][1]
     cnt += c
-print(cnt)
+if x == 0 and y == 0:
+    print(cnt)
+else:
+    print(-1)

@@ -30,10 +30,22 @@ for i in range(time):
                 m = j
                 mv = li[ty][tx]
         tres = (ball[0] + dy[m], ball[1] + dx[m])
-        if tres in tempballs:
-            tempballs.remove(tres)
+        tempballs.append(tres)
+    tempballs.sort()
+    r = tempballs[0]
+    i = 1
+    cnt = 0
+    while i < len(tempballs):
+        if r == tempballs[i]:
+            tempballs.pop(i)
+            cnt += 1
         else:
-            tempballs.append(tres)
+            r = tempballs[i]
+            if cnt > 0:
+                tempballs.remove(r)
+            i += 1
+            cnt = 0
+    print(tempballs)
     balls = tempballs
 
 print(len(balls))

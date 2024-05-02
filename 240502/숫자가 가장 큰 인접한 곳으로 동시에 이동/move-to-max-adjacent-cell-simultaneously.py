@@ -40,11 +40,15 @@ for i in range(time):
             tempballs.pop(i)
             cnt += 1
         else:
-            r = tempballs[i]
             if cnt > 0:
                 tempballs.remove(r)
-            i += 1
+                r = tempballs[i]
+            else:
+                r = tempballs[i]
+                i += 1
             cnt = 0
+    if cnt > 0:
+        tempballs.remove(r)
     balls = tempballs
 
 print(len(balls))

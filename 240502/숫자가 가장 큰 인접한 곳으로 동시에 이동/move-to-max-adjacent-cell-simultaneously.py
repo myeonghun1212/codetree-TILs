@@ -12,7 +12,7 @@ for i in range(n):
 balls = []
 for i in range(m):
     r, c = map(int, input().split())
-    balls.append((r,c))
+    balls.append((r-1 ,c-1))
 
 dx = [0,0,-1,1]
 dy = [1,-1,0,0]
@@ -29,9 +29,11 @@ for i in range(time):
                 # 이동 
                 m = j
                 mv = li[ty][tx]
-        
-        tempballs.append((ball[0] + dy[m], ball[1] + dx[m]))
-    tempballs = list(set(tempballs))
+        tres = (ball[0] + dy[m], ball[1] + dx[m])
+        if tres in tempballs:
+            tempballs.remove(tres)
+        else:
+            tempballs.append(tres)
     balls = tempballs
 
 print(len(balls))

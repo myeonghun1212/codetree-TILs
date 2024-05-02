@@ -45,7 +45,6 @@ for i in range(time):
                 tempballs.remove(r)
             i += 1
             cnt = 0
-    print(tempballs)
     balls = tempballs
 
 print(len(balls))
